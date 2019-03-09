@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    active: default
+#CSV conf file
+config:
+  csvfile: QuestionsAndAnswers

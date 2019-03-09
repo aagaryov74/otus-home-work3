@@ -19,7 +19,7 @@ public class ImplCsvFileReader implements CsvFileReader {
     private Integer readStrCounter;
 
     @Autowired
-    public ImplCsvFileReader(@Value("${config.csvfile}_#{T(java.util.Locale).getDefault().getLanguage()}.csv") String fileName) {
+    public ImplCsvFileReader(@Value("${csvfile}_#{T(java.util.Locale).getDefault().getLanguage()}.csv") String fileName) {
         this.readStrCounter = 0;
         this.csvFile = fileName;
     }

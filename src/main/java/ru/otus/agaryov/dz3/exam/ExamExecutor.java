@@ -19,7 +19,7 @@ public class ExamExecutor {
     private AsciiCheckerService asciiCheckerService;
     private IOService ioService;
 
-    @Value("${config.csvfile}")
+    @Value("${csvfile}")
     private String csvFilePrefix;
 
     @Autowired

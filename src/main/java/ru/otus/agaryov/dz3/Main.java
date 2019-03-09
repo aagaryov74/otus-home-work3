@@ -1,19 +1,17 @@
 package ru.otus.agaryov.dz3;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.*;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
-import ru.otus.agaryov.dz3.csvfilereader.CsvFileReader;
 import ru.otus.agaryov.dz3.exam.ExamExecutor;
-import ru.otus.agaryov.dz3.results.ImplResultChecker;
-import ru.otus.agaryov.dz3.results.ResultChecker;
-import ru.otus.agaryov.dz3.service.AsciiCheckerService;
 
-@Configuration
-@PropertySource("application.properties")
+@SpringBootApplication
+@PropertySource("application.yaml")
 @PropertySource("messages.properties")
-@ComponentScan
 public class Main {
 
     @Bean
@@ -31,7 +29,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Main.class);
+        ApplicationContext context = SpringApplication.run(Main.class, args);
         ExamExecutor executor = context.getBean(ExamExecutor.class);
         executor.doExam();
     }
