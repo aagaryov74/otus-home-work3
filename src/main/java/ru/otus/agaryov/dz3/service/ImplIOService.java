@@ -24,12 +24,14 @@ public class ImplIOService implements  IOService {
     }
     @Override
     public void printToConsole(String propertyParam) {
-        out.println(messageSource.getMessage(propertyParam,null,locale));
+        out.println(messageSource.getMessage(locale.getLanguage() +
+                "." + propertyParam,null,locale));
 
     }
     @Override
     public void printFToConsole(String propertyParam, Object ... args) {
-        out.printf(messageSource.getMessage(propertyParam,null,locale),args);
+        out.printf(messageSource.getMessage(locale.getLanguage() +
+                "." + propertyParam,null,locale),args);
     }
     @Override
     public String readFromConsole() throws IOException {

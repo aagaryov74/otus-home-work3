@@ -4,6 +4,7 @@ package ru.otus.agaryov.dz3.exam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
 import ru.otus.agaryov.dz3.csvfilereader.CsvFileReader;
 import ru.otus.agaryov.dz3.results.ResultChecker;
@@ -19,6 +20,7 @@ public class ExamExecutor {
     private AsciiCheckerService asciiCheckerService;
     private IOService ioService;
 
+    @NonNull
     @Value("${csvfile}")
     private String csvFilePrefix;
 
