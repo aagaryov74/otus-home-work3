@@ -3,61 +3,78 @@ package ru.otus.agaryov.dz3.csvfilereader;
 
 import org.junit.Assert;
 import org.junit.Test;
-
 import org.junit.runner.RunWith;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.MessageSource;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
-import ru.otus.agaryov.dz3.results.ImplResultChecker;
-import ru.otus.agaryov.dz3.results.ResultChecker;
 import ru.otus.agaryov.dz3.service.AsciiCheckerService;
 
-import java.util.LinkedHashMap;
-import java.util.Locale;
 import java.util.Map;
 
-import static org.mockito.Mockito.*;
-
 @RunWith(SpringRunner.class)
+@SpringBootTest
+@EnableConfigurationProperties
 @ContextConfiguration(classes = Config.class)
-@TestPropertySource(locations = "/test.properties")
+@TestPropertySource(locations = "/test.yaml")
 public class dz3Test {
 
+
+    @Qualifier("ruCSVFileReader")
     @Autowired
-    Config config;
+    CsvFileReader ruReader;
 
+    @Qualifier("ruCSVFileReader")
     @Autowired
-    @Qualifier("testAsciiChecker")
-    AsciiCheckerService asciiCheckerService;
+    CsvFileReader enReader;
 
+    @Qualifier("testChecker")
     @Autowired
-    @Qualifier("testMessageSource")
-    MessageSource ms;
-
+    AsciiCheckerService checker;
     @Autowired
-    @Qualifier("testFileReader")
-    CsvFileReader reader;
-
-    @Value("#{${questions}}")
-    private LinkedHashMap<String,String> cMap;
-
-    @Value("${question.one}")
-    private String q1;
-
-
+    Config.MapConfig mapConfig;
+    @Autowired
+    private ApplicationContext applicationContext;
 
     @Test
-    public void checkAnswers() {
+    public void testContext() {
+        Assert.assertNotNull(applicationContext.getBean("ruCSVFileReader"));
+        Assert.assertNotNull(applicationContext.getBean("enCSVFileReader"));
+        Assert.assertNotNull(applicationContext.getBean(Config.MapConfig.class));
+    }
 
-        Locale ruLocale = new Locale.Builder().setLanguage("ru").setRegion("RU").build();
+    @Test
+    public void testConfigMaps() {
+        Assert.assertNotNull(mapConfig.getRuMap());
+        Assert.assertNotNull(mapConfig.getEnMap());
+        Assert.assertEquals(mapConfig.getRuMap().size(), 3);
+        Assert.assertEquals(mapConfig.getEnMap().size(), 3);
 
-        CsvFileReader reader = mock(CsvFileReader.class);
+    }
 
+    @Test
+    public void checkAnswersCount() {
+        Map<String, String> ruQuest = ruReader.readCsvIntoMap();
+
+        Assert.assertNotNull(ruQuest);
+
+        Assert.assertEquals("There are must be 5 records in ru file",
+                5, (long) ruReader.getReadedStrsCount());
+
+        Map<String, String> enQuest = enReader.readCsvIntoMap();
+
+        Assert.assertNotNull(enQuest);
+
+        Assert.assertEquals("There are must be 5 records in en file",
+                5, (long) enReader.getReadedStrsCount());
+
+        //  CsvFileReader reader = spy(ruReader);
+
+/*
         // Не написали еще чтение из файла в мапу, но уже хотим проверить, как ответопроверятель работает
         when(reader.readCsvIntoMap()).thenReturn(cMap);
 
@@ -83,19 +100,7 @@ public class dz3Test {
         int qCount = sChecker.getQuestions().length;
 
         Assert.assertEquals(3,qCount);
-
+*/
     }
 
-    @Test
-    public void checkAsciiChecker() {
-        System.out.println("Ascii Checker test");
-        Assert.assertFalse(asciiCheckerService.isASCII("Кириллица"));
-    }
-
-
-    @Test
-    public void checkFileReader() {
-        Map<String,String> chMap = reader.readCsvIntoMap();
-        Assert.assertEquals(chMap.size(),5);
-    }
 }
