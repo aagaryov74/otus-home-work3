@@ -3,25 +3,38 @@ package ru.otus.agaryov.dz3.csvfilereader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.LinkedHashMap;
+import java.util.Locale;
 import java.util.Map;
 
 import com.opencsv.CSVReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class ImplCsvFileReader implements CsvFileReader {
-
+    private static final Logger logger = LoggerFactory.getLogger(CsvFileReader.class);
     // Config File with questions
-    private  String csvFile;
+    private String csvFile;
     // Counter of strings that have been read
     private Integer readStrCounter;
 
     @Autowired
-    public ImplCsvFileReader(@Value("${csvfile}_#{T(java.util.Locale).getDefault().getLanguage()}.csv") String fileName) {
+    public ImplCsvFileReader(@Value("${config.csvfile}") String csvFile) {
         this.readStrCounter = 0;
-        this.csvFile = fileName;
+        this.csvFile = csvFile + "_" +
+                java.util.Locale.getDefault().getLanguage() + ".csv";
+        logger.info("csvfile is {}",this.csvFile);
+    }
+
+    public ImplCsvFileReader(@Value("${config.csvfile}") String csvFile,
+                             String localeLanguage) {
+        this.readStrCounter = 0;
+        this.csvFile = csvFile + "_" +
+                localeLanguage + ".csv";
+        logger.info("csvfile is {}",this.csvFile);
     }
 
     @Override

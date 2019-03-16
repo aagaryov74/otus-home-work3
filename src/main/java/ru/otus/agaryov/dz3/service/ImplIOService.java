@@ -13,7 +13,7 @@ import static java.lang.System.out;
 
 @Service
 public class ImplIOService implements  IOService {
-    private MessageSource messageSource;
+    private final MessageSource messageSource;
     private Locale locale;
     private BufferedReader bufferedReader;
 

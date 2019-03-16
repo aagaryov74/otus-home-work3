@@ -15,13 +15,13 @@ import java.io.IOException;
 
 @Service
 public class ExamExecutor {
-    private CsvFileReader csvFile;
-    private ResultChecker checker;
-    private AsciiCheckerService asciiCheckerService;
-    private IOService ioService;
+    private final CsvFileReader csvFile;
+    private final ResultChecker checker;
+    private final AsciiCheckerService asciiCheckerService;
+    private final IOService ioService;
 
     @NonNull
-    @Value("${csvfile}")
+    @Value("${config.csvfile}")
     private String csvFilePrefix;
 
     @Autowired
