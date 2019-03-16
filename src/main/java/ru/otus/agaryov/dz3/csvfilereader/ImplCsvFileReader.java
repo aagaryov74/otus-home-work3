@@ -1,17 +1,16 @@
 package ru.otus.agaryov.dz3.csvfilereader;
 
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.LinkedHashMap;
-import java.util.Locale;
-import java.util.Map;
-
 import com.opencsv.CSVReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 @Component
 public class ImplCsvFileReader implements CsvFileReader {

@@ -68,10 +68,11 @@ public class dz3Test {
 
     @Test
     public void testConfigMaps() {
-        Assert.assertNotNull(mapConfig.getRuMap());
-        Assert.assertNotNull(mapConfig.getEnMap());
-        Assert.assertEquals(mapConfig.getRuMap().size(), 3);
-        Assert.assertEquals(mapConfig.getEnMap().size(), 3);
+        Assert.assertNotNull(mapConfig.getLanguages());
+        Assert.assertNotNull(mapConfig.getMapByLang("ru"));
+        Assert.assertNotNull(mapConfig.getMapByLang("en"));
+        Assert.assertEquals(mapConfig.getMapByLang("ru").size(), 3);
+        Assert.assertEquals(mapConfig.getMapByLang("en").size(), 3);
 
     }
 
@@ -96,35 +97,50 @@ public class dz3Test {
     @Test
     public void testSpyQuiz() {
 
-        CsvFileReader reader = Mockito.spy(ruReader);
-
-        // Не написали еще чтение из файла в мапу, но уже хотим проверить, как ответопроверятель работает
-        when(reader.readCsvIntoMap()).thenReturn(mapConfig.getEnMap());
-
         // Ответопроверятель
-        ResultChecker resChecker = new ImplResultChecker(reader);
+        ResultChecker resChecker;
         // Прокладка
-        ResultChecker sChecker = Mockito.spy(resChecker);
+        ResultChecker sChecker = null;
 
-        for (String question : mapConfig.getEnMap().keySet()
-        ) {
-            //System.out.println("question = "+ question+ " Answer = " +
-            //        mapConfig.getEnMap().get(question));
-            sChecker.checkAnswer(question, mapConfig.getEnMap().get(question));
+        for (String lang: mapConfig.getLanguages()) {
+            CsvFileReader reader =
+                    mock(ImplCsvFileReader.class);
+            System.out.println("lang =" + lang);
+            // Не написали еще чтение из файла в мапу, но уже хотим проверить, как ответопроверятель работает
+            when(reader.readCsvIntoMap()).thenReturn(mapConfig.getMapByLang(lang));
+            when(reader.getReadedStrsCount()).thenReturn(mapConfig.getMapByLang(lang).size());
+            resChecker = new ImplResultChecker(reader);
+            sChecker = Mockito.spy(resChecker);
+
+            for (String question : mapConfig.getMapByLang(lang).keySet()
+            ) {
+                sChecker.checkAnswer(question, mapConfig.getMapByLang(lang).get(question));
+//                System.out.println("q = "+ question + " a = " +
+//                        mapConfig.getMapByLang(lang).get(question) +
+//                        " counter in checker " + sChecker.getResult());
+            }
+            Assert.assertNotNull(sChecker);
+
+            int res = sChecker.getResult();
+
+            Assert.assertEquals(3, res);
+
+            if(lang.contentEquals("en")) {
+                verify(sChecker, times(1)).
+                        checkAnswer("How many legs does elephant have", "4");
+            }
+            if (lang.contentEquals("ru")) {
+                verify(sChecker, times(1)).
+                        checkAnswer("Сколько ног у слона", "4");
+            }
+            verify(sChecker, never()).
+                    checkAnswer("Сколько деревьев в саду", "21");
+
+            int qCount = sChecker.getQuestions().length;
+
+            Assert.assertEquals(3, qCount);
+
         }
-
-        int res = sChecker.getResult();
-        Assert.assertEquals(3, res);
-
-        verify(sChecker, times(1)).
-                checkAnswer("How many legs does elephant have", "4");
-
-        verify(sChecker, never()).
-                checkAnswer("Сколько деревьев в саду", "21");
-
-        int qCount = sChecker.getQuestions().length;
-
-        Assert.assertEquals(3, qCount);
 
     }
 

@@ -39,12 +39,16 @@ public class Config {
             this.maps = yaml.load(inputStream);
         }
 
-        Map<String, String> getRuMap() {
-            return maps.get("ru");
+        Map<String, String> getMapByLang(String lang) {
+            return maps.get(lang);
         }
 
-        Map<String, String> getEnMap() {
-            return maps.get("en");
+        Set<String> getLanguages() {
+            return maps.keySet();
+        }
+
+        String getCSVPref() {
+            return csvfile;
         }
     }
 
