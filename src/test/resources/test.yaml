@@ -1,15 +1,4 @@
 csvfile: QuestionsAndAnswers
-#! Questions ru
-questions:
-  ru:
-    - "How many legs does elephant have": 4
-    - "How many wheels does a car have": 4
-    - "How many months are in a year": 12
-#! Questions en
-  en :
-    - "Сколько ног у слона": 4
-    - "Сколько колес у машины": 4
-    - "Сколько месяцев в году": 12
 
 
 

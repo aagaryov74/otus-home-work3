@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="871156e9-6a84-4dc4-8a6e-be790ba45937" name="Default Changelist" comment="">
+    <list default="true" id="871156e9-6a84-4dc4-8a6e-be790ba45937" name="Default Changelist" comment="Add org.yaml.snakeyaml to read russian yaml file as a map correctly">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/testquestions.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/otus/agaryov/dz3/csvfilereader/Config.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/otus/agaryov/dz3/csvfilereader/dz3Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuestionsAndAnswers_en.csv" beforeDir="false" afterPath="$PROJECT_DIR$/QuestionsAndAnswers_en.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/otus/agaryov/dz3/csvfilereader/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/otus/agaryov/dz3/csvfilereader/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/otus/agaryov/dz3/csvfilereader/dz3Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/otus/agaryov/dz3/csvfilereader/dz3Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/test.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test.yaml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,23 +20,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/csvfilereader/ImplCsvFileReader.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="256">
+              <caret line="58" column="33" selection-start-line="57" selection-start-column="21" selection-end-line="58" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/exam/ExamExecutor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="47" column="21" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
+            <state relative-caret-position="-401">
+              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -39,44 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/otus/agaryov/dz3/csvfilereader/dz3Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="70" column="59" selection-start-line="70" selection-start-column="59" selection-end-line="70" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/messages.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/service/ImplIOService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/test.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="15" selection-start-line="2" selection-end-line="11" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="45" column="68" selection-start-line="45" selection-start-column="68" selection-end-line="45" selection-end-column="68" />
+            <state relative-caret-position="-155">
+              <caret line="105" column="20" lean-forward="true" selection-start-line="105" selection-start-column="20" selection-end-line="105" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,29 +51,70 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/service/ImplIOService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="229">
+              <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/test.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/testquestions.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/otus/agaryov/dz3/csvfilereader/Config.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+            <state relative-caret-position="273">
+              <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
               <folding>
-                <element signature="e#1348#1349#0" expanded="true" />
-                <element signature="e#1384#1385#0" expanded="true" />
-                <element signature="e#1433#1434#0" expanded="true" />
-                <element signature="e#1469#1470#0" expanded="true" />
-                <element signature="e#1510#1511#0" expanded="true" />
-                <element signature="e#1546#1547#0" expanded="true" />
-                <element signature="e#1599#1600#0" expanded="true" />
-                <element signature="e#1635#1636#0" expanded="true" />
+                <element signature="e#1062#1063#0" expanded="true" />
+                <element signature="e#1110#1111#0" expanded="true" />
+                <element signature="e#1467#1468#0" expanded="true" />
+                <element signature="e#1554#1555#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/results/ImplResultChecker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/results/ResultChecker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+            <state relative-caret-position="114">
+              <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -155,21 +162,25 @@
         <option value="$PROJECT_DIR$/src/test/resources/test.properties" />
         <option value="$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/service/ImplIOService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/exam/ExamExecutor.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/ru/otus/agaryov/dz3/csvfilereader/MapConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/csvfilereader/ImplCsvFileReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/service/MapQuestions.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/test.yaml" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.yaml" />
         <option value="$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/Main.java" />
+        <option value="$PROJECT_DIR$/QuestionsAndAnswers_en.csv" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.yaml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/resources/test.yaml" />
         <option value="$PROJECT_DIR$/src/test/java/ru/otus/agaryov/dz3/csvfilereader/Config.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/testquestions.yaml" />
         <option value="$PROJECT_DIR$/src/test/java/ru/otus/agaryov/dz3/csvfilereader/dz3Test.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="x" value="35" />
+    <option name="y" value="23" />
+    <option name="width" value="1405" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -179,7 +190,105 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="dz3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dz3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dz3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dz3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dz3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dz3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dz3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dz3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dz3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dz3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dz3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dz3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dz3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dz3" type="462c0819:PsiDirectoryNode" />
+              <item name="exam" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dz3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dz3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dz3" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dz3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dz3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dz3" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dz3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dz3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dz3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dz3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dz3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dz3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dz3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dz3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="csvfilereader" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dz3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dz3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -190,7 +299,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552740618426" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552748855737" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -324,6 +433,7 @@
       <workItem from="1552711684018" duration="1028000" />
       <workItem from="1552727554672" duration="5638000" />
       <workItem from="1552734071122" duration="6003000" />
+      <workItem from="1552740487176" duration="7822000" />
     </task>
     <task id="LOCAL-00001" summary="remove pom.xml to start using Spring Boot Initializr">
       <created>1552147493266</created>
@@ -360,49 +470,55 @@
       <option name="project" value="LOCAL" />
       <updated>1552740398288</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="reformat code">
+      <created>1552740655940</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1552740655940</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="dz3Test - 2019.03.16 at 15h 21m 13s.xml">
+    <history-entry file="dz3Test - 2019.03.16 at 17h 48m 02s.xml">
       <configuration name="dz3Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="dz3Test - 2019.03.16 at 15h 22m 17s.xml">
+    <history-entry file="dz3Test - 2019.03.16 at 17h 49m 37s.xml">
       <configuration name="dz3Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="dz3Test - 2019.03.16 at 15h 31m 55s.xml">
+    <history-entry file="dz3Test - 2019.03.16 at 17h 50m 34s.xml">
       <configuration name="dz3Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="dz3Test - 2019.03.16 at 15h 32m 54s.xml">
+    <history-entry file="dz3Test - 2019.03.16 at 17h 54m 14s.xml">
       <configuration name="dz3Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="dz3Test - 2019.03.16 at 15h 33m 32s.xml">
+    <history-entry file="dz3Test - 2019.03.16 at 17h 59m 06s.xml">
       <configuration name="dz3Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="dz3Test - 2019.03.16 at 15h 35m 14s.xml">
+    <history-entry file="dz3Test - 2019.03.16 at 18h 00m 22s.xml">
       <configuration name="dz3Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="dz3Test - 2019.03.16 at 15h 35m 42s.xml">
+    <history-entry file="dz3Test - 2019.03.16 at 18h 01m 31s.xml">
       <configuration name="dz3Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="dz3Test - 2019.03.16 at 15h 37m 25s.xml">
+    <history-entry file="dz3Test - 2019.03.16 at 18h 02m 46s.xml">
       <configuration name="dz3Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="dz3Test - 2019.03.16 at 15h 39m 27s.xml">
+    <history-entry file="dz3Test - 2019.03.16 at 18h 03m 38s.xml">
       <configuration name="dz3Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="dz3Test - 2019.03.16 at 15h 40m 58s.xml">
+    <history-entry file="dz3Test - 2019.03.16 at 18h 05m 33s.xml">
       <configuration name="dz3Test" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31237000" />
+    <option name="totallyTimeSpent" value="39059000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2932761" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24177396" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -411,7 +527,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.46964064" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.46964064" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -420,7 +536,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.08530184" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.3283767" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3283767" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -484,7 +600,9 @@
     <MESSAGE value="change messages format to one yaml file" />
     <MESSAGE value="revert to junit4 (because of RunWith(SpringRunner.Class))&#10;- I don't know for sure how to use @ExtendWith with the same functionality" />
     <MESSAGE value="revert to junit4 (because of RunWith(SpringRunner.Class))&#10;- I don't know for sure how to use @ExtendWith with the same functionality&#10;- And I cannot understand how I can manage to read test config test.yaml instead of application.yaml" />
-    <option name="LAST_COMMIT_MESSAGE" value="revert to junit4 (because of RunWith(SpringRunner.Class))&#10;- I don't know for sure how to use @ExtendWith with the same functionality&#10;- And I cannot understand how I can manage to read test config test.yaml instead of application.yaml" />
+    <MESSAGE value="reformat code" />
+    <MESSAGE value="Add org.yaml.snakeyaml to read russian yaml file as a map correctly" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add org.yaml.snakeyaml to read russian yaml file as a map correctly" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/dz2.iml" />
@@ -517,9 +635,6 @@
     <entry file="file://$PROJECT_DIR$/src/test/resources/test_ru_RU.properties" />
     <entry file="file://$PROJECT_DIR$/src/test/ru/otus/agaryov/dz3/csvfilereader/Config.java" />
     <entry file="file://$PROJECT_DIR$/src/test/ru/otus/agaryov/dz3/csvfilereader/dz3Test.java" />
-    <entry file="file://$PROJECT_DIR$/QuestionsAndAnswers_en.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/service/IOService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -534,13 +649,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/results/ResultChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/csvfilereader/CsvFileReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -548,34 +656,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/exam/ExamExecutor.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/otus/agaryov/dz3/csvfilereader/MapConfig.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/service/MapQuestions.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/csvfilereader/ImplCsvFileReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/results/ImplResultChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="47" column="21" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/otus/agaryov/dz3/csvfilereader/MapConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="798">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QuestionsAndAnswers_en.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -587,53 +683,70 @@
       </provider>
       <provider editor-type-id="ResourceBundle" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="41" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/results/ResultChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/results/ImplResultChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/exam/ExamExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-401">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/service/ImplIOService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        <state relative-caret-position="229">
+          <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/csvfilereader/ImplCsvFileReader.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/service/MapQuestions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#563#564#0" expanded="true" />
-            <element signature="e#588#589#0" expanded="true" />
-            <element signature="e#633#634#0" expanded="true" />
-            <element signature="e#658#659#0" expanded="true" />
-            <element signature="e#707#708#0" expanded="true" />
-            <element signature="e#735#736#0" expanded="true" />
-            <element signature="e#784#785#0" expanded="true" />
-            <element signature="e#812#813#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="114">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/test.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="15" selection-start-line="2" selection-end-line="11" selection-end-column="34" />
+        <state relative-caret-position="19">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
       <provider editor-type-id="ResourceBundle" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/testquestions.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="45" column="68" selection-start-line="45" selection-start-column="68" selection-end-line="45" selection-end-column="68" />
+        <state relative-caret-position="171">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/otus/agaryov/dz3/csvfilereader/dz3Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-155">
+          <caret line="105" column="20" lean-forward="true" selection-start-line="105" selection-start-column="20" selection-end-line="105" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -642,32 +755,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/otus/agaryov/dz3/csvfilereader/Config.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+        <state relative-caret-position="273">
+          <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
           <folding>
-            <element signature="e#1348#1349#0" expanded="true" />
-            <element signature="e#1384#1385#0" expanded="true" />
-            <element signature="e#1433#1434#0" expanded="true" />
-            <element signature="e#1469#1470#0" expanded="true" />
-            <element signature="e#1510#1511#0" expanded="true" />
-            <element signature="e#1546#1547#0" expanded="true" />
-            <element signature="e#1599#1600#0" expanded="true" />
-            <element signature="e#1635#1636#0" expanded="true" />
+            <element signature="e#1062#1063#0" expanded="true" />
+            <element signature="e#1110#1111#0" expanded="true" />
+            <element signature="e#1467#1468#0" expanded="true" />
+            <element signature="e#1554#1555#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/otus/agaryov/dz3/csvfilereader/dz3Test.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="70" column="59" selection-start-line="70" selection-start-column="59" selection-end-line="70" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+        <state relative-caret-position="256">
+          <caret line="58" column="33" selection-start-line="57" selection-start-column="21" selection-end-line="58" selection-end-column="33" />
         </state>
       </provider>
     </entry>
