@@ -46,10 +46,6 @@ public class Config {
         Set<String> getLanguages() {
             return maps.keySet();
         }
-
-        String getCSVPref() {
-            return csvfile;
-        }
     }
 
     @Bean(name = "ruCSVFileReader")

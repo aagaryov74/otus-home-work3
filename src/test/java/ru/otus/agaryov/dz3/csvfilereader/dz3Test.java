@@ -100,12 +100,11 @@ public class dz3Test {
         // Ответопроверятель
         ResultChecker resChecker;
         // Прокладка
-        ResultChecker sChecker = null;
+        ResultChecker sChecker;
 
         for (String lang: mapConfig.getLanguages()) {
             CsvFileReader reader =
                     mock(ImplCsvFileReader.class);
-            System.out.println("lang =" + lang);
             // Не написали еще чтение из файла в мапу, но уже хотим проверить, как ответопроверятель работает
             when(reader.readCsvIntoMap()).thenReturn(mapConfig.getMapByLang(lang));
             when(reader.getReadedStrsCount()).thenReturn(mapConfig.getMapByLang(lang).size());
