@@ -1,6 +1,7 @@
 #CSV conf file
 config:
   csvfile: QuestionsAndAnswers
+  messages: messages.yaml
 
 spring:
   profiles:

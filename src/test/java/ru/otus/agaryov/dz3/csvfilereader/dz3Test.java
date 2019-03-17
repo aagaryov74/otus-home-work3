@@ -14,6 +14,7 @@ import ru.otus.agaryov.dz3.results.ResultCheckerImpl;
 import ru.otus.agaryov.dz3.service.AsciiCheckerServiceImpl;
 import ru.otus.agaryov.dz3.service.LocalizatorServiceImpl;
 
+import java.util.Locale;
 import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThatCode;
@@ -53,7 +54,8 @@ class dz3Test {
     @DisplayName("Проверяем что при переключении на несущкствующие консоли не бросаются исключения")
     @Test
     void testThatLocalizatorDoentThowExcentions() {
-        assertThatCode(() -> localizatorService.getLocaleByLang("yy")).doesNotThrowAnyException();
+        assertThatCode(() -> localizatorService.
+                getLocale()).doesNotThrowAnyException();
     }
 
     @DisplayName("Проверяем что csvFileReader не бросает исключений при несуществующих файлах")
@@ -76,14 +78,15 @@ class dz3Test {
     @DisplayName("Проверяем что класс - читатель из csv файла читает по 5 вопросов из них на русском и английском")
     @Test
     void checkQuestions() {
-        csvFileReader.setCsvFile(localizatorService.getCSVFileByLang("ru"));
+        csvFileReader.setCsvFile(localizatorService.getCSVFile());
+
 
         Map<String, String> ruQuiz = csvFileReader.readCsvIntoMap();
         assertNotNull(ruQuiz);
 
         assertEquals(5, (int) csvFileReader.getReadedStrsCount());
 
-        csvFileReader.setCsvFile(localizatorService.getCSVFileByLang("en"));
+        csvFileReader.setCsvFile(localizatorService.getCSVFile());
 
         Map<String, String> enQuiz = csvFileReader.readCsvIntoMap();
 

@@ -3,8 +3,6 @@ package ru.otus.agaryov.dz3.exam;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
 import ru.otus.agaryov.dz3.csvfilereader.CsvFileReader;
 import ru.otus.agaryov.dz3.results.ResultChecker;
@@ -39,6 +37,7 @@ public class ExamExecutorImpl implements ExamExecutor {
             if (resultChecker.getQuestions() != null) {
                 String consoleLanguage = ioService.getLocaleLang();
                 ioService.printToConsole("enterFio");
+
                 String studentFIO = ioService.readFromConsole();
                 if (!(consoleLanguage.equalsIgnoreCase("en")&&(asciiCheckerServiceImpl.isASCII(studentFIO))
                 )) {
@@ -46,11 +45,12 @@ public class ExamExecutorImpl implements ExamExecutor {
                     String yesOrNo = ioService.readFromConsole();
                     if (yesOrNo.trim().equalsIgnoreCase("y")) {
                         String language = ioService.getLanguage("enterlanguage");
-                        resultChecker.setMap(csvFileReader.
-                                setCsvFile((localizatorService.getCSVFileByLang(language))));
-                        ioService.setLocale(localizatorService.getLocaleByLang(language));
-                        if (resultChecker.getQuestions() == null) throw new IOException();
-
+                        if (localizatorService.setLanguage(language)) {
+                            resultChecker.setMap(csvFileReader.readCsvIntoMap());
+                            if (resultChecker.getQuestions() == null) throw new IOException();
+                        } else {
+                            System.err.println("cannot set language");
+                        }
                     }
                 }
                 ioService.printFToConsole("welcome",

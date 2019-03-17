@@ -41,6 +41,7 @@ public class IOServiceImpl implements  IOService {
     public String getMessage(String propertyParam) {
         return messageSource.getMessage(propertyParam,null,locale);
     }
+
     @Override
     public String getLocaleLang() {
         return locale.getLanguage();
