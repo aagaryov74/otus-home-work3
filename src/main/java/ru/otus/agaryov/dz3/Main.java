@@ -13,8 +13,8 @@ import ru.otus.agaryov.dz3.exam.ExamExecutorImpl;
 import java.util.Properties;
 
 @SpringBootApplication
-@PropertySource("application.yaml")
-@PropertySource("messages.yaml")
+//@PropertySource("application.yaml")
+//@PropertySource("messages.yaml")
 public class Main {
 /*
 
