@@ -12,6 +12,7 @@ import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
 import ru.otus.agaryov.dz3.results.ResultCheckerImpl;
 import ru.otus.agaryov.dz3.service.AsciiCheckerServiceImpl;
+import ru.otus.agaryov.dz3.service.IOServiceImpl;
 import ru.otus.agaryov.dz3.service.LocalizatorServiceImpl;
 
 import java.util.Locale;
@@ -42,6 +43,9 @@ class dz3Test {
     private LocalizatorServiceImpl localizatorService;
 
     @SpyBean
+    private IOServiceImpl ioService;
+
+    @SpyBean
     private ResultCheckerImpl resultChecker;
 
     @DisplayName("Тестируем asciiChecker")
@@ -51,11 +55,10 @@ class dz3Test {
         assertTrue(asciiCheckerService.isASCII("this is ascii only"));
     }
 
-    @DisplayName("Проверяем что при переключении на несущкствующие консоли не бросаются исключения")
+    @DisplayName("Проверяем что при переключении на несуществующие консоли не бросаются исключения")
     @Test
     void testThatLocalizatorDoentThowExcentions() {
-        assertThatCode(() -> localizatorService.
-                getLocale()).doesNotThrowAnyException();
+        assertThatCode(() -> localizatorService.setLanguage("yy")).doesNotThrowAnyException();
     }
 
     @DisplayName("Проверяем что csvFileReader не бросает исключений при несуществующих файлах")

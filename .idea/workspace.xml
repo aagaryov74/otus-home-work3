@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="871156e9-6a84-4dc4-8a6e-be790ba45937" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/otus/agaryov/dz3/csvfilereader/dz3Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/otus/agaryov/dz3/csvfilereader/dz3Test.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/otus/agaryov/dz3/csvfilereader/dz3Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="80" column="66" selection-start-line="80" selection-start-column="66" selection-end-line="80" selection-end-column="66" />
+            <state relative-caret-position="309">
+              <caret line="60" column="63" selection-start-line="60" selection-start-column="63" selection-end-line="60" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,7 +108,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/service/IOServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
@@ -186,12 +187,12 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/service/LocalizatorService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/csvfilereader/CsvFileReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/service/IOService.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ru/otus/agaryov/dz3/csvfilereader/dz3Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/exam/ExamExecutorImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.yaml" />
         <option value="$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/csvfilereader/CsvFileReaderImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/service/LocalizatorServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/service/IOServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ru/otus/agaryov/dz3/csvfilereader/dz3Test.java" />
       </list>
     </option>
   </component>
@@ -327,7 +328,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552846233774" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552846797269" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -354,7 +355,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SpringBoot">
+  <component name="RunManager" selected="JUnit.dz3Test">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -469,7 +470,7 @@
       <workItem from="1552740487176" duration="11552000" />
       <workItem from="1552754605621" duration="93000" />
       <workItem from="1552755196458" duration="284000" />
-      <workItem from="1552759476879" duration="21509000" />
+      <workItem from="1552759476879" duration="21949000" />
     </task>
     <task id="LOCAL-00001" summary="remove pom.xml to start using Spring Boot Initializr">
       <created>1552147493266</created>
@@ -583,19 +584,17 @@
       <option name="project" value="LOCAL" />
       <updated>1552846230474</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="change to single localization service">
+      <created>1552846248511</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1552846248511</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="dz3Test - 2019.03.17 at 17h 17m 18s.xml">
-      <configuration name="dz3Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="dz3Test - 2019.03.17 at 17h 19m 18s.xml">
-      <configuration name="dz3Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="dz3Test - 2019.03.17 at 17h 24m 07s.xml">
-      <configuration name="dz3Test" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="dz3Test - 2019.03.17 at 17h 25m 55s.xml">
       <configuration name="dz3Test" configurationId="JUnit" />
     </history-entry>
@@ -617,14 +616,24 @@
     <history-entry file="dz3Test - 2019.03.17 at 19h 02m 42s.xml">
       <configuration name="dz3Test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="dz3Test - 2019.03.17 at 21h 15m 12s.xml">
+      <configuration name="dz3Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="dz3Test - 2019.03.17 at 21h 16m 24s.xml">
+      <configuration name="dz3Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="dz3Test - 2019.03.17 at 21h 17m 50s.xml">
+      <configuration name="dz3Test" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64675000" />
+    <option name="totallyTimeSpent" value="65115000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31402004" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31402004" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -633,7 +642,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32961586" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31598514" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32589838" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -849,16 +858,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/otus/agaryov/dz3/csvfilereader/dz3Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="80" column="66" selection-start-line="80" selection-start-column="66" selection-end-line="80" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="436">
@@ -927,6 +926,16 @@
             <element signature="e#1490#1491#0" expanded="true" />
             <element signature="e#1533#1534#0" expanded="true" />
             <element signature="e#1628#1629#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/otus/agaryov/dz3/csvfilereader/dz3Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="60" column="63" selection-start-line="60" selection-start-column="63" selection-end-line="60" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
