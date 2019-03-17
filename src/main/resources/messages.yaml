@@ -1,0 +1,18 @@
+#Exam questions
+
+en:
+  enterFio: "Enter Your First Name and Last Name"
+  welcome: "Hello %s,\nYou will be asked %d questions.\nLets go!\n\n"
+  question: "Question  %d: %s?\n> Your answer:\n"
+  results: "ОК\nYou have correctly answered to %d questions."
+  iowarning: "Sorry, but you cannot continue due errors with config file"
+  doyouwanttochangelocale: "Do you want to change console language?\nenter y = yes or n = no\n"
+  enterlanguage: "Enter your language (2 letters)\nFor example en = English, ru = Russian"
+ru:
+  enterFio: "Введите Ваше Имя и Фамилию"
+  welcome: "Здравствуйте, %s!\nВам предстоит ответить на %d вопр.\nНачнем!\n\n"
+  question: "Вопрос %d: %s?\n > Ваш ответ:\n"
+  results: "ОК\nВы ответили правильно на %d вопр.\n"
+  iowarning: "Простите но ничего не получится из-за проблем с чтением конфигурационного файла"
+  doyouwanttochangelocale: "Вы хотите задать язык консоли?\nВведите y = да, n = нет\n"
+  enterlanguage: "Введите Ваш язык (2 буквы)\nПример en = Английский, ru = Русский\n"

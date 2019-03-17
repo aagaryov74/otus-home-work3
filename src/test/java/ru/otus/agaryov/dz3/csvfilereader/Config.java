@@ -1,32 +1,36 @@
 package ru.otus.agaryov.dz3.csvfilereader;
 
-import org.springframework.context.MessageSource;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.support.ReloadableResourceBundleMessageSource;
-import org.springframework.test.context.TestPropertySource;
-import ru.otus.agaryov.dz3.service.AsciiCheckerService;
+import org.springframework.stereotype.Component;
+import org.yaml.snakeyaml.Yaml;
+
+import java.io.InputStream;
+import java.util.Map;
+import java.util.Set;
 
 @Configuration
-@TestPropertySource(locations = "/test.properties")
 public class Config {
 
-    @Bean
-    AsciiCheckerService testAsciiChecker() {
-        return new AsciiCheckerService();
+    @Component
+    public class MapConfig {
+        private Map<String, Map<String, String>> maps;
+
+        public MapConfig() {
+
+            Yaml yaml = new Yaml();
+            InputStream inputStream = this.getClass()
+                    .getClassLoader()
+                    .getResourceAsStream("testquestions.yaml");
+            this.maps = yaml.load(inputStream);
+        }
+
+        Map<String, String> getMapByLang(String lang) {
+            return maps.get(lang);
+        }
+
+        Set<String> getLanguages() {
+            return maps.keySet();
+        }
     }
 
-    @Bean
-    CsvFileReader testFileReader() {
-        return new ImplCsvFileReader("QuestionsAndAnswers_en.csv");
-    }
-
-    @Bean
-    public MessageSource testMessageSource() {
-        ReloadableResourceBundleMessageSource ms
-                = new ReloadableResourceBundleMessageSource();
-        ms.setBasename("test");
-        ms.setDefaultEncoding("UTF-8");
-        return ms;
-    }
 }

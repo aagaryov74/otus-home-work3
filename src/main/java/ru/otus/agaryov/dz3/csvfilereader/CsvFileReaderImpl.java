@@ -1,27 +1,30 @@
 package ru.otus.agaryov.dz3.csvfilereader;
 
+import com.opencsv.CSVReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import com.opencsv.CSVReader;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
-
 @Component
-public class ImplCsvFileReader implements CsvFileReader {
-
+public class CsvFileReaderImpl implements CsvFileReader {
+    private static final Logger logger = LoggerFactory.getLogger(CsvFileReader.class);
     // Config File with questions
-    private  String csvFile;
+    private String csvFile;
     // Counter of strings that have been read
     private Integer readStrCounter;
 
     @Autowired
-    public ImplCsvFileReader(@Value("${csvfile}_#{T(java.util.Locale).getDefault().getLanguage()}.csv") String fileName) {
+    public CsvFileReaderImpl(@Value("${config.csvfile}") String csvFile) {
         this.readStrCounter = 0;
-        this.csvFile = fileName;
+        this.csvFile = csvFile + "_" +
+                java.util.Locale.getDefault().getLanguage() + ".csv";
     }
 
     @Override
@@ -45,9 +48,8 @@ public class ImplCsvFileReader implements CsvFileReader {
     }
 
     @Override
-    public Map<String,String> setCsvFile(String fileName) {
+    public void setCsvFile(String fileName) {
         this.csvFile = fileName;
-        return readCsvIntoMap();
     }
 
     @Override

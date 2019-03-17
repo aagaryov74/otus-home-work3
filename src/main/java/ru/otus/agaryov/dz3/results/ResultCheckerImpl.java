@@ -8,12 +8,12 @@ import ru.otus.agaryov.dz3.csvfilereader.CsvFileReader;
 import java.util.Map;
 
 @Component
-public class ImplResultChecker implements ResultChecker {
+public class ResultCheckerImpl implements ResultChecker {
     private Integer result;
     private Map<String, String> qaMap;
 
     @Autowired
-    public ImplResultChecker(@Qualifier("implCsvFileReader") CsvFileReader csvFileReader){
+    public ResultCheckerImpl(CsvFileReader csvFileReader){
         this.result = 0;
         if (csvFileReader != null) this.qaMap = csvFileReader.readCsvIntoMap();
     }
@@ -39,6 +39,7 @@ public class ImplResultChecker implements ResultChecker {
 
     @Override
     public void setMap(Map<String, String> aMap) {
+        result = 0;
         this.qaMap = aMap;
     }
 }

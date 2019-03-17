@@ -8,5 +8,5 @@ public interface CsvFileReader {
     // How many correct strings are in config file?
     Integer getReadedStrsCount();
     // change file if we need to change locale in runtime;
-    Map<String,String> setCsvFile(String fileName);
+    void setCsvFile(String fileName);
 }

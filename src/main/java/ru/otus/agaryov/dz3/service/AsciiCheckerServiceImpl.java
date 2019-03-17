@@ -3,7 +3,7 @@ package ru.otus.agaryov.dz3.service;
 import org.springframework.stereotype.Service;
 
 @Service
-public class AsciiCheckerService {
+public class AsciiCheckerServiceImpl implements AcsiiCheckerService {
 
         // to check if a string only contains US-ASCII code point
         public boolean isASCII(String checkStr) {

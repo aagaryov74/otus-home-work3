@@ -1,6 +1,8 @@
-spring:
-  profiles:
-    active: default
 #CSV conf file
 config:
   csvfile: QuestionsAndAnswers
+  messages: messages.yaml
+
+spring:
+  profiles:
+    active: default
