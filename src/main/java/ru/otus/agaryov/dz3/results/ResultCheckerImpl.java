@@ -13,7 +13,7 @@ public class ResultCheckerImpl implements ResultChecker {
     private Map<String, String> qaMap;
 
     @Autowired
-    public ResultCheckerImpl(@Qualifier("csvFileReaderImpl") CsvFileReader csvFileReader){
+    public ResultCheckerImpl(CsvFileReader csvFileReader){
         this.result = 0;
         if (csvFileReader != null) this.qaMap = csvFileReader.readCsvIntoMap();
     }
@@ -39,6 +39,7 @@ public class ResultCheckerImpl implements ResultChecker {
 
     @Override
     public void setMap(Map<String, String> aMap) {
+        result = 0;
         this.qaMap = aMap;
     }
 }
