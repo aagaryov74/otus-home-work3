@@ -12,12 +12,12 @@ import java.util.Locale;
 import static java.lang.System.out;
 
 @Service
-public class ImplIOService implements  IOService {
+public class IOServiceImpl implements  IOService {
     private final MessageSource messageSource;
     private Locale locale;
     private BufferedReader bufferedReader;
 
-    public ImplIOService(@Qualifier("messageSource") MessageSource messageSource) {
+    public IOServiceImpl(@Qualifier("messageSource") MessageSource messageSource) {
         this.messageSource = messageSource;
         bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         locale = Locale.getDefault();

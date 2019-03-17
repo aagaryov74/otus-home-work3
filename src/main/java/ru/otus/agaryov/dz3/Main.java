@@ -8,7 +8,7 @@ import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.*;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.core.io.ClassPathResource;
-import ru.otus.agaryov.dz3.exam.ExamExecutor;
+import ru.otus.agaryov.dz3.exam.ExamExecutorImpl;
 
 import java.util.Properties;
 
@@ -43,7 +43,7 @@ public class Main {
 
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(Main.class, args);
-        ExamExecutor executor = context.getBean(ExamExecutor.class);
+        ExamExecutorImpl executor = context.getBean(ExamExecutorImpl.class);
         executor.doExam();
     }
 }

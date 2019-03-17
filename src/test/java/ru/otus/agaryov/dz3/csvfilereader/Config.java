@@ -1,16 +1,11 @@
 package ru.otus.agaryov.dz3.csvfilereader;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.beans.factory.config.YamlPropertiesFactoryBean;
-import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.support.ReloadableResourceBundleMessageSource;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 import org.yaml.snakeyaml.Yaml;
-import ru.otus.agaryov.dz3.service.AsciiCheckerService;
+import ru.otus.agaryov.dz3.service.AsciiCheckerServiceImpl;
 
 import java.io.InputStream;
 import java.util.*;
@@ -22,8 +17,8 @@ public class Config {
     private String csvfile;
 
     @Bean(name = "AsciiChecker")
-    AsciiCheckerService testAsciiChecker() {
-        return new AsciiCheckerService();
+    AsciiCheckerServiceImpl testAsciiChecker() {
+        return new AsciiCheckerServiceImpl();
     }
 
 
@@ -50,12 +45,12 @@ public class Config {
 
     @Bean(name = "ruCSVFileReader")
     CsvFileReader testRUCsvFileReader() {
-        return new ImplCsvFileReader(csvfile,"ru");
+        return new CsvFileReaderImpl(csvfile,"ru");
     }
 
     @Bean(name = "enCSVFileReader")
     CsvFileReader testENCsvFileReader() {
-        return new ImplCsvFileReader(csvfile,"en");
+        return new CsvFileReaderImpl(csvfile,"en");
     }
 
 }

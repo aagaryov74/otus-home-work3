@@ -13,10 +13,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
-import ru.otus.agaryov.dz3.exam.ExamExecutor;
-import ru.otus.agaryov.dz3.results.ImplResultChecker;
+import ru.otus.agaryov.dz3.results.ResultCheckerImpl;
 import ru.otus.agaryov.dz3.results.ResultChecker;
-import ru.otus.agaryov.dz3.service.AsciiCheckerService;
+import ru.otus.agaryov.dz3.service.AsciiCheckerServiceImpl;
 
 import java.util.Map;
 
@@ -31,7 +30,7 @@ public class dz3Test {
 
     @Qualifier("AsciiChecker")
     @Autowired
-    private AsciiCheckerService testAsciiChecker;
+    private AsciiCheckerServiceImpl testAsciiChecker;
 
     @Qualifier("ruCSVFileReader")
     @Autowired
@@ -50,7 +49,7 @@ public class dz3Test {
     private ResultChecker resultChecker;
 
     @Autowired
-    private ExamExecutor examExecutor;
+    private ExamExecutorImpl examExecutor;
 */
     @Test
     public void testContext() {
@@ -104,11 +103,11 @@ public class dz3Test {
 
         for (String lang: mapConfig.getLanguages()) {
             CsvFileReader reader =
-                    mock(ImplCsvFileReader.class);
+                    mock(CsvFileReaderImpl.class);
             // Не написали еще чтение из файла в мапу, но уже хотим проверить, как ответопроверятель работает
             when(reader.readCsvIntoMap()).thenReturn(mapConfig.getMapByLang(lang));
             when(reader.getReadedStrsCount()).thenReturn(mapConfig.getMapByLang(lang).size());
-            resChecker = new ImplResultChecker(reader);
+            resChecker = new ResultCheckerImpl(reader);
             sChecker = Mockito.spy(resChecker);
 
             for (String question : mapConfig.getMapByLang(lang).keySet()

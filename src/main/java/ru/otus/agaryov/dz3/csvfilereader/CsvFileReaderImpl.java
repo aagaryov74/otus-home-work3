@@ -13,7 +13,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 @Component
-public class ImplCsvFileReader implements CsvFileReader {
+public class CsvFileReaderImpl implements CsvFileReader {
     private static final Logger logger = LoggerFactory.getLogger(CsvFileReader.class);
     // Config File with questions
     private String csvFile;
@@ -21,14 +21,14 @@ public class ImplCsvFileReader implements CsvFileReader {
     private Integer readStrCounter;
 
     @Autowired
-    public ImplCsvFileReader(@Value("${config.csvfile}") String csvFile) {
+    public CsvFileReaderImpl(@Value("${config.csvfile}") String csvFile) {
         this.readStrCounter = 0;
         this.csvFile = csvFile + "_" +
                 java.util.Locale.getDefault().getLanguage() + ".csv";
         logger.info("csvfile is {}",this.csvFile);
     }
 
-    public ImplCsvFileReader(@Value("${config.csvfile}") String csvFile,
+    public CsvFileReaderImpl(@Value("${config.csvfile}") String csvFile,
                              String localeLanguage) {
         this.readStrCounter = 0;
         this.csvFile = csvFile + "_" +
