@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="871156e9-6a84-4dc4-8a6e-be790ba45937" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_beta_2.xml" beforeDir="false" />
+    <list default="true" id="871156e9-6a84-4dc4-8a6e-be790ba45937" name="Default Changelist" comment="change realization of methods connected with localizator service">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/exam/ExamExecutorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/exam/ExamExecutorImpl.java" afterDir="false" />
@@ -27,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/otus/agaryov/dz3/csvfilereader/dz3Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+            <state relative-caret-position="160">
+              <caret line="80" column="4" selection-start-line="80" selection-start-column="4" selection-end-line="80" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -62,10 +54,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/exam/ExamExecutorImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
+            <state relative-caret-position="195">
               <caret line="51" selection-start-line="51" selection-end-line="51" />
             </state>
           </provider>
@@ -195,11 +187,11 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/csvfilereader/CsvFileReaderImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/service/LocalizatorServiceImplImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/service/LocalizatorServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ru/otus/agaryov/dz3/csvfilereader/dz3Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/service/LocalizatorService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/service/IOServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/exam/ExamExecutorImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/service/IOService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ru/otus/agaryov/dz3/csvfilereader/dz3Test.java" />
       </list>
     </option>
   </component>
@@ -335,7 +327,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552825673956" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552825839511" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -477,7 +469,7 @@
       <workItem from="1552740487176" duration="11552000" />
       <workItem from="1552754605621" duration="93000" />
       <workItem from="1552755196458" duration="284000" />
-      <workItem from="1552759476879" duration="8419000" />
+      <workItem from="1552759476879" duration="8678000" />
     </task>
     <task id="LOCAL-00001" summary="remove pom.xml to start using Spring Boot Initializr">
       <created>1552147493266</created>
@@ -563,7 +555,14 @@
       <option name="project" value="LOCAL" />
       <updated>1552816842753</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="change realization of methods connected with localizator service">
+      <created>1552825713101</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1552825713101</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -599,7 +598,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51585000" />
+    <option name="totallyTimeSpent" value="51844000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -613,7 +612,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32961586" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4944238" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4944238" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -622,7 +621,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.08530184" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3283767" />
+      <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.3283767" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.3283767" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -703,7 +702,8 @@
     <MESSAGE value="Rename Impl -&gt; to -&gt; Impl" />
     <MESSAGE value="remark @PropertySource(&quot;messages.properties&quot;)&#10;       @PropertySource(&quot;messages.yaml&quot;)" />
     <MESSAGE value="add localizator service" />
-    <option name="LAST_COMMIT_MESSAGE" value="add localizator service" />
+    <MESSAGE value="change realization of methods connected with localizator service" />
+    <option name="LAST_COMMIT_MESSAGE" value="change realization of methods connected with localizator service" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/dz2.iml" />
@@ -827,16 +827,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/otus/agaryov/dz3/csvfilereader/dz3Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/results/ResultCheckerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -909,8 +899,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/otus/agaryov/dz3/exam/ExamExecutorImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
+        <state relative-caret-position="195">
           <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/otus/agaryov/dz3/csvfilereader/dz3Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="80" column="4" selection-start-line="80" selection-start-column="4" selection-end-line="80" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

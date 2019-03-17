@@ -47,12 +47,8 @@ public class IOServiceImpl implements  IOService {
     }
 
     @Override
-    public void setLocaleLang(String language) {
-        if (language.equalsIgnoreCase("en")) {
-            this.locale = new Locale.Builder().setLanguage("en").setRegion("US").build();
-        } else {
-            this.locale = new Locale.Builder().setLanguage(language).setRegion(language.toUpperCase()).build();
-        }
+    public void setLocale(Locale locale) {
+        this.locale = locale;
     }
 
     @Override

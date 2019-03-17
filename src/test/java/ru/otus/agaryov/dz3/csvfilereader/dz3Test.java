@@ -1,107 +1,91 @@
 package ru.otus.agaryov.dz3.csvfilereader;
 
 
-import org.junit.Assert;
-import org.junit.Test;
+import junit.framework.Assert;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.ApplicationContext;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.boot.test.mock.mockito.SpyBean;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
-import ru.otus.agaryov.dz3.results.ResultCheckerImpl;
 import ru.otus.agaryov.dz3.results.ResultChecker;
+import ru.otus.agaryov.dz3.results.ResultCheckerImpl;
 import ru.otus.agaryov.dz3.service.AsciiCheckerServiceImpl;
 
 import java.util.Map;
 
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
+
+@DisplayName("Тесты классов программы тестирования студентов")
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @EnableConfigurationProperties
 @ContextConfiguration(classes = Config.class)
 @TestPropertySource(locations = "/test.yaml")
-public class dz3Test {
-
-    @Qualifier("AsciiChecker")
-    @Autowired
-    private AsciiCheckerServiceImpl testAsciiChecker;
-
-    @Qualifier("ruCSVFileReader")
-    @Autowired
-    private CsvFileReader ruReader;
-
-    @Qualifier("ruCSVFileReader")
-    @Autowired
-    private CsvFileReader enReader;
+class dz3Test {
 
     @Autowired
     Config.MapConfig mapConfig;
-    @Autowired
-    private ApplicationContext applicationContext;
-/*
-    @Autowired
-    private ResultChecker resultChecker;
 
-    @Autowired
-    private ExamExecutorImpl examExecutor;
-*/
+    @SpyBean
+    private AsciiCheckerServiceImpl asciiCheckerService;
+
+    @SpyBean
+    private CsvFileReaderImpl csvFileReader;
+
+    @DisplayName("Тестируем asciiChecker")
     @Test
-    public void testContext() {
-        Assert.assertNotNull(applicationContext.getBean("ruCSVFileReader"));
-        Assert.assertNotNull(applicationContext.getBean("enCSVFileReader"));
-        Assert.assertNotNull(applicationContext.getBean(Config.MapConfig.class));
+    void testAsciiCheckerService() {
+        assertFalse(asciiCheckerService.isASCII("Привет"));
+        assertTrue(asciiCheckerService.isASCII("this is ascii only"));
     }
 
-    @Test
-    public void testAscii() {
-        Assert.assertFalse(testAsciiChecker.isASCII("Привет"));
-        Assert.assertTrue(testAsciiChecker.isASCII("this is ascii only"));
 
-    }
-
+    @DisplayName("Проверяем что в тестовом файле с вопросами есть по 3 вопроса на англ и русском")
     @Test
-    public void testConfigMaps() {
-        Assert.assertNotNull(mapConfig.getLanguages());
-        Assert.assertNotNull(mapConfig.getMapByLang("ru"));
-        Assert.assertNotNull(mapConfig.getMapByLang("en"));
-        Assert.assertEquals(mapConfig.getMapByLang("ru").size(), 3);
-        Assert.assertEquals(mapConfig.getMapByLang("en").size(), 3);
+    void testConfigMaps() {
+        assertNotNull(mapConfig.getLanguages());
+        assertNotNull(mapConfig.getMapByLang("ru"));
+        assertNotNull(mapConfig.getMapByLang("en"));
+        assertEquals(mapConfig.getMapByLang("ru").size(), 3);
+        assertEquals(mapConfig.getMapByLang("en").size(), 3);
 
     }
 
+
+    @DisplayName("Проверяем что класс - читатель из csv файла читает по 5 вопросов из них на русском и английском")
     @Test
-    public void checkQuestions() {
-        Map<String, String> ruQuiz = ruReader.readCsvIntoMap();
+    void checkQuestions() {
+        Map<String, String> Quiz = csvFileReader.readCsvIntoMap();
+        assertNotNull(Quiz);
 
-        Assert.assertNotNull(ruQuiz);
+        assertEquals(5, (int) csvFileReader.getReadedStrsCount());
 
-        Assert.assertEquals("There are must be 5 records in ru questions file",
-                5, (long) ruReader.getReadedStrsCount());
+        Map<String, String> enQuiz = csvFileReader.readCsvIntoMap();
 
-        Map<String, String> enQuiz = enReader.readCsvIntoMap();
+        assertNotNull(enQuiz);
 
-        Assert.assertNotNull(enQuiz);
-
-        Assert.assertEquals("There are must be 5 records in en questions file",
-                5, (long) enReader.getReadedStrsCount());
+        assertEquals(5, (int) csvFileReader.getReadedStrsCount());
 
     }
 
     @Test
-    public void testSpyQuiz() {
+    void testSpyQuiz() {
 
         // Ответопроверятель
         ResultChecker resChecker;
         // Прокладка
         ResultChecker sChecker;
 
-        for (String lang: mapConfig.getLanguages()) {
+        for (String lang : mapConfig.getLanguages()) {
             CsvFileReader reader =
                     mock(CsvFileReaderImpl.class);
             // Не написали еще чтение из файла в мапу, но уже хотим проверить, как ответопроверятель работает
@@ -117,13 +101,13 @@ public class dz3Test {
 //                        mapConfig.getMapByLang(lang).get(question) +
 //                        " counter in checker " + sChecker.getResult());
             }
-            Assert.assertNotNull(sChecker);
+            assertNotNull(sChecker);
 
             int res = sChecker.getResult();
 
-            Assert.assertEquals(3, res);
+            assertEquals(3, res);
 
-            if(lang.contentEquals("en")) {
+            if (lang.contentEquals("en")) {
                 verify(sChecker, times(1)).
                         checkAnswer("How many legs does elephant have", "4");
             }
@@ -136,7 +120,7 @@ public class dz3Test {
 
             int qCount = sChecker.getQuestions().length;
 
-            Assert.assertEquals(3, qCount);
+            assertEquals(3, qCount);
 
         }
 

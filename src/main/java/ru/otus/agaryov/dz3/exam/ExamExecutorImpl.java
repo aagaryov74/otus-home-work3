@@ -10,34 +10,33 @@ import ru.otus.agaryov.dz3.csvfilereader.CsvFileReader;
 import ru.otus.agaryov.dz3.results.ResultChecker;
 import ru.otus.agaryov.dz3.service.AsciiCheckerServiceImpl;
 import ru.otus.agaryov.dz3.service.IOService;
+import ru.otus.agaryov.dz3.service.LocalizatorService;
 
 import java.io.IOException;
 
 @Service
 public class ExamExecutorImpl implements ExamExecutor {
-    private final CsvFileReader csvFile;
-    private final ResultChecker checker;
+    private final CsvFileReader csvFileReader;
+    private final ResultChecker resultChecker;
     private final AsciiCheckerServiceImpl asciiCheckerServiceImpl;
     private final IOService ioService;
-
-    @NonNull
-    @Value("${config.csvfile}")
-    private String csvFilePrefix;
+    private final LocalizatorService localizatorService;
 
     @Autowired
     public ExamExecutorImpl(@Qualifier("csvFileReaderImpl") CsvFileReader csvFileReader,
                             ResultChecker resultChecker,
                             IOService ioService,
-                            AsciiCheckerServiceImpl asciiCheckerServiceImpl) {
-        this.csvFile = csvFileReader;
-        this.checker = resultChecker;
+                            AsciiCheckerServiceImpl asciiCheckerServiceImpl, LocalizatorService localizatorService) {
+        this.csvFileReader = csvFileReader;
+        this.resultChecker = resultChecker;
         this.ioService = ioService;
         this.asciiCheckerServiceImpl = asciiCheckerServiceImpl;
+        this.localizatorService = localizatorService;
     }
 
     public void doExam() {
         try {
-            if (checker.getQuestions() != null) {
+            if (resultChecker.getQuestions() != null) {
                 String consoleLanguage = ioService.getLocaleLang();
                 ioService.printToConsole("enterFio");
                 String studentFIO = ioService.readFromConsole();
@@ -46,25 +45,25 @@ public class ExamExecutorImpl implements ExamExecutor {
                     ioService.printToConsole("doyouwanttochangelocale");
                     String yesOrNo = ioService.readFromConsole();
                     if (yesOrNo.trim().equalsIgnoreCase("y")) {
-                        String lang = ioService.getLanguage("enterlanguage");
-                        checker.setMap(csvFile.setCsvFile((csvFilePrefix +
-                                "_" + lang.toLowerCase() + ".csv")));
-                        ioService.setLocaleLang(lang);
-                        if (checker.getQuestions() == null) throw new IOException();
+                        String language = ioService.getLanguage("enterlanguage");
+                        resultChecker.setMap(csvFileReader.
+                                setCsvFile((localizatorService.getCSVFileByLang(language))));
+                        ioService.setLocale(localizatorService.getLocaleByLang(language));
+                        if (resultChecker.getQuestions() == null) throw new IOException();
 
                     }
                 }
                 ioService.printFToConsole("welcome",
-                        studentFIO, csvFile.getReadedStrsCount());
+                        studentFIO, csvFileReader.getReadedStrsCount());
 
-                for (int i = 0; i < checker.getQuestions().length; i++) {
-                    String question = checker.getQuestions()[i].toString();
+                for (int i = 0; i < resultChecker.getQuestions().length; i++) {
+                    String question = resultChecker.getQuestions()[i].toString();
                     ioService.printFToConsole("question",
                             i + 1, question);
                     String input = ioService.readFromConsole();
-                    checker.checkAnswer(question, input);
+                    resultChecker.checkAnswer(question, input);
                 }
-                ioService.printFToConsole("results", checker.getResult());
+                ioService.printFToConsole("results", resultChecker.getResult());
             } else {
                 throw new IOException();
             }

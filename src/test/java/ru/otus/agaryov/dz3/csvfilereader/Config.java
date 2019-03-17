@@ -16,11 +16,6 @@ public class Config {
     @Value("${csvfile}")
     private String csvfile;
 
-    @Bean(name = "AsciiChecker")
-    AsciiCheckerServiceImpl testAsciiChecker() {
-        return new AsciiCheckerServiceImpl();
-    }
-
 
     @Component
     public class MapConfig {
@@ -41,16 +36,6 @@ public class Config {
         Set<String> getLanguages() {
             return maps.keySet();
         }
-    }
-
-    @Bean(name = "ruCSVFileReader")
-    CsvFileReader testRUCsvFileReader() {
-        return new CsvFileReaderImpl(csvfile,"ru");
-    }
-
-    @Bean(name = "enCSVFileReader")
-    CsvFileReader testENCsvFileReader() {
-        return new CsvFileReaderImpl(csvfile,"en");
     }
 
 }
